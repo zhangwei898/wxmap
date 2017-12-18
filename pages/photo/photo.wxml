@@ -1,0 +1,14 @@
+<view >
+    <view class="bgPhoto">环境照</view>
+    <view class="flex-wrp flex-row">
+        <view class="flex-item" wx:for="{{avatarUrlArr}}" wx:key="unique" bindtap="gotoShow" id="{{index}}" >
+          <image src="{{item}}" mode="aspectFill"></image>
+        </view>
+    </view>
+        <view class="bgPhoto">室内照</view>
+    <view class="flex-wrp flex-row">
+        <view class="flex-item" wx:for="{{avatarUrlArr1}}" wx:key="unique" bindtap="gotoShow1" id="{{index}}" >
+          <image src="{{item}}" mode="aspectFill"></image>
+        </view>
+    </view>
+</view>

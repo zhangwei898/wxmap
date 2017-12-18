@@ -1,0 +1,107 @@
+<!-- 模板1 -->
+<template name="muban1">
+   <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">名称</view>
+          </view>
+          <view class="weui-cell__hd">
+            {{data_welcome}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">拍摄人员</view>
+          </view> 
+          <view class="weui-cell__bd">
+            {{data_photo}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">拍摄日期</view>
+          </view>
+          <view class="weui-cell__bd">
+            {{data_photoDate}}
+          </view>
+        </view>
+   </view>
+</template>
+<!-- 模板2 -->
+<template name="muban2">
+   <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">站名:</view>
+          </view>
+          <view class="weui-cell__bd">
+            {{data_name}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">运营商:</view>
+          </view>
+          <view class="weui-cell__bd" bindtap="tapBus" >
+            {{data_business}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">城市名称:</view>
+          </view>
+          <view class="weui-cell__bd">
+            {{data_city}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">区县名称:</view>
+          </view>
+          <view class="weui-cell__bd">
+            {{data_DistrictCity}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">经度:</view>
+          </view>
+           <view class="weui-cell__bd">
+            <input bindinput="tapInput" placeholder='666' value='{{data_longitude}}'/>
+          </view> 
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">纬度:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input bindinput="tapInput" placeholder='888' value="{{data_latitude}}"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">需求经度:</view>
+          </view>  
+          <view class="weui-cell__bd">
+            {{data_needlongitude}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">需求纬度:</view>
+          </view>
+          <view class="weui-cell__bd">
+            {{data_needlatitude}}
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+            <view class="weui-label">地址:</view>
+          </view>
+          <view class="weui-cell__bd">
+            {{data_address}}
+          </view>
+        </view>
+   </view>
+</template>
+<!-- 分割 照片 -->

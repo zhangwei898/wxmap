@@ -1,0 +1,53 @@
+ <import src="../template/templates.wxml" />
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cell" style='background-color:#E0FFFF'>
+      <view class="weui-cells__bd">填报</view>
+    </view>
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+        </view>
+      </view>
+      <!-- 选项卡获取假数据 -->
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <modal bindtap="cancel" hidden="{{hidden}}" confirm-text="" cancel-text="">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <label wx:for="{{items}}" class="radio" wx:key="id">
+                <radio value="{{item.value}}" checked="{{item.checked}}" /> {{item.name}}
+              </label>
+            </radio-group>
+          </modal>
+          <!-- 模板数据 -->
+          <template wx:if="{{detail_class == 'wei1'}}" is="muban1" data="{{data_name,data_city,data_business,data_photo}}"></template>
+          <template wx:else is="muban2" data="{{data_name,data_city,data_business,data_longitude,data_latitude,data_DistrictCity}}"></template>
+          <view class="weui-cells weui-cells_after-title">
+          </view>
+        </view>
+        <!-- 分割 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <view >
+                <view class="bgPhoto">环境照</view>
+                <view class="flex-wrp flex-row">
+                    <view class="flex-item" wx:for="{{avatarUrlArr}}" wx:key="unique" bindtap="gotoShow" id="{{index}}" >
+                      <image src="{{item}}" mode="aspectFill"></image>
+                    </view>
+                </view>
+                <view class="bgPhoto">室内照</view>
+                <view class="flex-wrp flex-row">
+                    <view class="flex-item" wx:for="{{avatarUrlArr1}}" wx:key="unique" bindtap="gotoShow1" id="{{index}}" >
+                      <image src="{{item}}" mode="aspectFill"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

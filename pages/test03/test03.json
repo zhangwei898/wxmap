@@ -1,0 +1,9 @@
+  {
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "blue",
+      "navigationBarTitleText": "聊聊吧",
+      "navigationBarTextStyle": "black",
+      "enablePullDownRefresh": true
+    }
+  }

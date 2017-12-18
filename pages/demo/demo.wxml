@@ -1,0 +1,18 @@
+<view class="page">
+  <view >
+     <button bindtap="onChangeShowState">{{showView?'显示':'隐藏'}}</button>
+  </view>
+  <view wx:if="{{showView}}">
+    <text class="bright789-text">我是被显示控件</text> 
+  </view>
+  <view wx:else="{{showView}}">
+    <text class="bright789-text">我是被隐藏控件</text> 
+  </view>
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i" wx:key="unique">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j" wx:key="unique1">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>
+</view>
