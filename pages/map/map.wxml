@@ -1,0 +1,32 @@
+<view class="map_container" id="mapId">
+    <map  
+      class="map"
+      id="map4select" 
+      longitude="{{longitude}}" 
+      latitude="{{latitude}}" 
+      scale="14" 
+      show-location="true" 
+      markers="{{markers}}" 
+      bindmarkertap="makertap"
+      style="width: 100%; height: {{height}}px;"
+      bindcontroltap="controltap"
+      controls="{{controls}}"
+    >
+    </map> 
+</view> 
+<!-- <view id="modal">
+   <modal hidden="{{hidden}}" title="模板列表" no-cancel="{{true}}" confirm-text="关闭" bindconfirm="confirm" >  
+    <scroll-view scroll-y style="height: {{height-130}}px;"  scroll-into-view="{{toView}}"  scroll-top="{{scrollTop}}">
+     <block wx:for="{{list}}" wx:for-item="item" wx:key="{{item.id}}">
+      <view class="weui-cells weui-cells_after-title">  -->
+      <!-- 传参id -->
+        <!-- <navigator url="../detail/detail?id={{item.id}}&class={{item.class}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <text class="weui-cell__bd">{{item.name}}</text>
+        </navigator>
+      </view>
+     </block>
+    </scroll-view>
+  </modal>
+</view> -->
+
+

@@ -1,0 +1,31 @@
+/* .display_show{
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+.display_none{
+  display: none;
+} */
+.flex-row{
+     display: flex;
+     flex-direction:row;
+     flex-wrap: wrap;
+     /* justify-content: space-between; */
+   
+}
+.flex-item{
+      margin:10px;
+     height:150rpx;
+     width:150rpx;
+     border: 1px solid #fff;
+     background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513145109611&di=3db8304bd7f4112670ff421dbfab7ed1&imgtype=0&src=http%3A%2F%2Ftupian.enterdesk.com%2F2014%2Flxy%2F2014%2F12%2F06%2F43%2F4.jpg");
+}
+.bgPhoto{
+     background-color:	#FFEFD5;
+}
+.flex-item image{
+     height:150rpx;
+     width:150rpx
+}
+
+

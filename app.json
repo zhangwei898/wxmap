@@ -1,0 +1,35 @@
+   {
+  "pages":[
+    "pages/index/index",
+    "pages/map/map",
+    "pages/detail/detail",
+    "pages/logs/logs",
+    "pages/mapzhuan/mapz",
+    "pages/photo/photo",
+    "pages/demo/demo"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#AEEEEE",
+    "navigationBarTitleText": "聊聊吧",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar":{
+    "backgroundTextStyle": "black",
+    "color":"black",
+    "selectedColor":"#00CD00",
+    "backgroundColor":"#AEEEEE",
+    "list":[
+      {"pagePath":"pages/index/index",
+      "text":"起始页"},
+      {"pagePath":"pages/map/map",
+       "iconPath": "imgs/2017118.png",
+       "text":"地图"},
+       {"pagePath":"pages/photo/photo",
+       "text":"获取数组数据"},
+       {"pagePath": "pages/demo/demo",
+        "text": "下拉列表"}
+    ]
+  }
+}
