@@ -26,6 +26,7 @@ Page({
       7: ''
     },
     dwData: [
+<<<<<<< HEAD
     // {
     //   id: '1',
     //   name: '南京站',
@@ -75,6 +76,57 @@ Page({
     //   photo: "小张",
     //   photoDate: "2017.10"
     // },
+=======
+    {
+      id: '1',
+      name:'南京站',
+      business:'移动',
+      city: '南京市',
+      DistrictCity:'建邺区',
+      longitude:'118.733455',
+      latitude:'31.991953',
+      needLongitude: '118.733455',
+      needLatitude: '需求纬度：31.991953',
+      address:'',
+      worker:'',
+      date: '2017.10',
+      times: '第几次勘察：1',
+      plies:'层数：',
+      style:'结构形式：砖混',
+      state:'维护是否方便：是',
+      tower:'新建塔桅类型：支撑抱杆',
+      height:'6'
+    },
+    {
+      id: '2',
+      name: '站名：',
+      business: '联通',
+      city: '苏州市',
+      DistrictCity: '工业园区',
+      longitude: '',
+      latitude: '',
+      needLongitude: '',
+      needLatitude: '',
+      address: '',
+      worker: '',
+      date: '2017.10',
+      times: '第几次勘察：1',
+      plies: '层数：',
+      style: '结构形式：',
+      state: '维护是否方便：',
+      tower: '新建塔桅类型：',
+      height: '6',
+      welcome: "欢迎领导莅临",
+      photo: "小张",
+      photoDate: "2017.10"
+    },
+    { 
+      id:'3',
+      welcome: "欢迎领导莅临",
+      photo: "小张",
+      photoDate: "2017.10"
+    },
+>>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
      {
        "eleId": "站点信息",
        "eleName": "站点信息",
@@ -145,6 +197,7 @@ Page({
           photoUrl: [],
         }
     ],
+<<<<<<< HEAD
     //缓存数组长度，进一步提高代码性能
     getElename:function(eleName,dwData){
          var result=[]
@@ -155,6 +208,8 @@ Page({
          }
          console.log(result)
       },
+=======
+>>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
     items: [
       { name: '移动', value: '移动' },
       { name: '联通', value: '联通', checked: 'true' },
@@ -183,7 +238,11 @@ Page({
   },
   //input替换
   tapInput:function(e){
+<<<<<<< HEAD
      console.log("input")
+=======
+     console.log(8888)
+>>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
      console.log(e)
      this.setData({
        data_longitude:e.detail.value
@@ -271,7 +330,11 @@ Page({
     console.log(options.class);
     console.log(this.data.dwData);
     console.log(this.data.hidden);
+<<<<<<< HEAD
     console.log('Items',this.items);
+=======
+    console.log('213123',this.items);
+>>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
     let init;
     // var a = options.id; a = a.replace(/"/g, ''); alert(a);
     for (var i = 0; i < this.data.dwData.length; i++) {
@@ -280,7 +343,12 @@ Page({
         }
       };
     console.log(this);
+<<<<<<< HEAD
     console.log('Init',init);
+=======
+
+    console.log('1111111111111111',init);
+>>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
     this.setData({
       detail_class: options.class,
       data_name: init.name,
