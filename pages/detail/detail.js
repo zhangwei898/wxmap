@@ -26,107 +26,6 @@ Page({
       7: ''
     },
     dwData: [
-<<<<<<< HEAD
-    // {
-    //   id: '1',
-    //   name: '南京站',
-    //   business: '移动',
-    //   city: '南京市',
-    //   DistrictCity: '建邺区',
-    //   longitude: '118.733455',
-    //   latitude: '31.991953',
-    //   needLongitude: '118.733455',
-    //   needLatitude: '需求纬度：31.991953',
-    //   address: '',
-    //   worker: '',
-    //   date: '2017.10',
-    //   times: '第几次勘察：1',
-    //   plies: '层数：',
-    //   style: '结构形式：砖混',
-    //   state: '维护是否方便：是',
-    //   tower: '新建塔桅类型：支撑抱杆',
-    //   height: '6'
-    // },
-    // {
-    //   id: '2',
-    //   name: '站名：',
-    //   business: '联通',
-    //   city: '苏州市',
-    //   DistrictCity: '工业园区',
-    //   longitude: '',
-    //   latitude: '',
-    //   needLongitude: '',
-    //   needLatitude: '',
-    //   address: '',
-    //   worker: '',
-    //   date: '2017.10',
-    //   times: '第几次勘察：1',
-    //   plies: '层数：',
-    //   style: '结构形式：',
-    //   state: '维护是否方便：',
-    //   tower: '新建塔桅类型：',
-    //   height: '6',
-    //   welcome: "欢迎领导莅临",
-    //   photo: "小张",
-    //   photoDate: "2017.10"
-    // },
-    // {
-    //   id: '3',
-    //   welcome: "欢迎领导莅临",
-    //   photo: "小张",
-    //   photoDate: "2017.10"
-    // },
-=======
-    {
-      id: '1',
-      name:'南京站',
-      business:'移动',
-      city: '南京市',
-      DistrictCity:'建邺区',
-      longitude:'118.733455',
-      latitude:'31.991953',
-      needLongitude: '118.733455',
-      needLatitude: '需求纬度：31.991953',
-      address:'',
-      worker:'',
-      date: '2017.10',
-      times: '第几次勘察：1',
-      plies:'层数：',
-      style:'结构形式：砖混',
-      state:'维护是否方便：是',
-      tower:'新建塔桅类型：支撑抱杆',
-      height:'6'
-    },
-    {
-      id: '2',
-      name: '站名：',
-      business: '联通',
-      city: '苏州市',
-      DistrictCity: '工业园区',
-      longitude: '',
-      latitude: '',
-      needLongitude: '',
-      needLatitude: '',
-      address: '',
-      worker: '',
-      date: '2017.10',
-      times: '第几次勘察：1',
-      plies: '层数：',
-      style: '结构形式：',
-      state: '维护是否方便：',
-      tower: '新建塔桅类型：',
-      height: '6',
-      welcome: "欢迎领导莅临",
-      photo: "小张",
-      photoDate: "2017.10"
-    },
-    { 
-      id:'3',
-      welcome: "欢迎领导莅临",
-      photo: "小张",
-      photoDate: "2017.10"
-    },
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
      {
        "eleId": "站点信息",
        "eleName": "站点信息",
@@ -137,7 +36,7 @@ Page({
        "subContent": "",
        "defaultValue": "",
        "tipInfo": ""
-      },
+     },
      {
        "eleId": "标题",
        "eleName": "站名",
@@ -160,7 +59,7 @@ Page({
         "defaultValue": "",
         "tipInfo": ""
       },
-     {
+      {
         "eleId": "资源方",
         "eleName": "原运营商归属",
         "eleType": "元素",
@@ -194,22 +93,50 @@ Page({
         "tipInfo": ""
         },
         {
-          photoUrl: [],
+          "eleId": "区县名称",
+          "eleName": "区县名称",
+          "eleType": "元素",
+          "isRequired": "是",
+          "controlType": "文本框",
+          "autoFillOption": "自动区县",
+          "subContent": "",
+          "defaultValue": "",
+          "tipInfo": ""
+        },
+        {
+          "eleId": "建设类型",
+          "eleName": "建设类型",
+          "eleType": "元素",
+          "isRequired": "是",
+          "controlType": "下拉列表-单选",
+          "autoFillOption": "",
+          "subContent": "地面新建站,楼顶新建站,地面改造站,楼顶改造站,地面隐患站,楼顶隐患站",
+          "defaultValue": "楼顶改造站",
+          "tipInfo": ""
+        },
+        {
+          "eleId": "场景划分",
+          "eleName": "场景划分",
+          "eleType": "元素",
+          "isRequired": "是",
+          "controlType": "下拉列表-单选",
+          "autoFillOption": "",
+          "subContent": "密集市区,一般市区,县城,乡镇,农村,山区",
+          "defaultValue": "",
+          "tipInfo": ""
+        },
+        {
+          "eleId": "需求经度",
+          "eleName": "需求经度",
+          "eleType": "元素",
+          "isRequired": "是",
+          "controlType": "文本框",
+          "autoFillOption": "",
+          "subContent": "",
+          "defaultValue": "",
+          "tipInfo": ""
         }
     ],
-<<<<<<< HEAD
-    //缓存数组长度，进一步提高代码性能
-    getElename:function(eleName,dwData){
-         var result=[]
-         for(i=0,len=dwData.length;i<len;i++){
-             result.push(dwData[i][eleName])
-             result[i]=dwData[i][eleName];
-             return
-         }
-         console.log(result)
-      },
-=======
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
     items: [
       { name: '移动', value: '移动' },
       { name: '联通', value: '联通', checked: 'true' },
@@ -238,11 +165,7 @@ Page({
   },
   //input替换
   tapInput:function(e){
-<<<<<<< HEAD
-     console.log("input")
-=======
-     console.log(8888)
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
+     console.log("Input")
      console.log(e)
      this.setData({
        data_longitude:e.detail.value
@@ -325,50 +248,51 @@ Page({
     })
   },
   //增加的内容
-  onLoad: function (options) {
-    console.log(options.id);
-    console.log(options.class);
-    console.log(this.data.dwData);
-    console.log(this.data.hidden);
-<<<<<<< HEAD
-    console.log('Items',this.items);
-=======
-    console.log('213123',this.items);
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
-    let init;
-    // var a = options.id; a = a.replace(/"/g, ''); alert(a);
-    for (var i = 0; i < this.data.dwData.length; i++) {
-      if (this.data.dwData[i].id == options.id) {
-          init = this.data.dwData[i]
-        }
-      };
-    console.log(this);
-<<<<<<< HEAD
-    console.log('Init',init);
-=======
-
-    console.log('1111111111111111',init);
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
-    this.setData({
-      detail_class: options.class,
-      data_name: init.name,
-      data_id: init.id,
-      data_city: init.city,
-      data_business:init.business,
-      data_DistrictCity: init.DistrictCity,
-      data_longitude: init.longitude,
-      data_latitude: init.latitude,
-      data_needLongitude: init.needLongitude,
-      data_needLatitude: init.needLatitude,
-      data_address:init.address,
-      data_worker: init.worker,
-      data_date: init.date,
-      data_times: init.times,
-      data_plies:init.lies,
-      data_state:init.state ,
-      data_welcome:init.welcome,
-      data_photo :init.photo,
-      data_photoDate:init.photoDate 
-    })
-  }
+  onLoad:      
+  //缓存数组长度，进一步提高代码性能
+    function(eleName, dwData) {
+      var result = []
+      for (var i = 0, len = this.data.dwData.length; i < len; i++) {
+        //  result.push(dwData[i][eleName])
+        result[i] = this.data.dwData[i]["eleName"];
+    }
+    console.log(result)
+  },
+    // function (options) {
+    // console.log(options.id);
+    // console.log(options.class);
+    // console.log(this.data.dwData);
+    // console.log(this.data.hidden);
+    // console.log('Items',this.items);
+    // let init;
+    // 一个id对应着一组详细的数据 通过 id 对应
+    // for (var i = 0; i < this.data.dwData.length; i++) {
+    //   if (this.data.dwData[i].id == options.id) {
+    //       init = this.data.dwData[i]
+    //     }
+    //   };
+    // console.log(this);
+    // console.log('Init',init);
+    // this.setData({
+    //   detail_class: options.class,
+    //   data_name: init.name,
+    //   data_id: init.id,
+    //   data_city: init.city,
+    //   data_business:init.business,
+    //   data_DistrictCity: init.DistrictCity,
+    //   data_longitude: init.longitude,
+    //   data_latitude: init.latitude,
+    //   data_needLongitude: init.needLongitude,
+    //   data_needLatitude: init.needLatitude,
+    //   data_address:init.address,
+    //   data_worker: init.worker,
+    //   data_date: init.date,
+    //   data_times: init.times,
+    //   data_plies:init.lies,
+    //   data_state:init.state ,
+    //   data_welcome:init.welcome,
+    //   data_photo :init.photo,
+    //   data_photoDate:init.photoDate 
+    // })
+  // }
 });

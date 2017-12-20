@@ -3,26 +3,19 @@ Page({
     controlId:"",
     list: [],
   },
-<<<<<<< HEAD
-  //新建页面加载
-=======
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
   onLoad: function (options) {
     this.setData({
       controlId: options.controlId,
       list: this.getDataFromServer(options)
     })
-<<<<<<< HEAD
     console.log("Options",options)
   },
     getDataFromServer: function (e) {
     console.log("E",e);
-=======
     console.log("222333",options)
   },
     getDataFromServer: function (e) {
     console.log(e);
->>>>>>> 97b306412dfec0c5317f6e8df6b28bcb3f5938e6
     // TODO跟服务器交互的 模拟数据 ，
     if (e.markerId == 11) {
       var JSON = [
