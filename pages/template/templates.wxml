@@ -32,7 +32,7 @@
    <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
-            <view class="weui-label">站名:</view>
+            <view class="weui-label">{{data_yy}}: </view>
           </view>
           <view class="weui-cell__bd">
             {{data_name}}

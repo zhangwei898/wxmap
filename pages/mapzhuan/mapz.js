@@ -11,11 +11,7 @@ Page({
     console.log("Options",options)
   },
     getDataFromServer: function (e) {
-    console.log("E",e);
-    console.log("222333",options)
-  },
-    getDataFromServer: function (e) {
-    console.log(e);
+    console.log("形参66",e);
     // TODO跟服务器交互的 模拟数据 ，
     if (e.markerId == 11) {
       var JSON = [
@@ -27,8 +23,8 @@ Page({
       ];
     } else if (e.controlId == 9) {
       var JSON = [
-        { id: 1, name: '17娄底新建房屋面租赁站' },
-        { id: 2, name: '17娄底改造放物面租赁机房站' },
+        { id: "站点信息", name: '17娄底新建房屋面租赁站' },
+        { id: "站点信息", name: '17娄底改造放物面租赁机房站' },
         { id: 3, name: '欢迎领导', class: 'wei1' },
         { id: 4, name: '17娄底新建地面站' },
         { id: 5, name: '17娄底改造地面机房站' },
@@ -50,4 +46,6 @@ Page({
     }
     return JSON;
   },
+  onShow: function(){
+  }
 })

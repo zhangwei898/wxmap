@@ -138,30 +138,29 @@ Page({
   //   return JSON;
   // },
   //分割 点击自己 自定义 的锚点，拿到后台数据绑定页面
-  makertap: function(e) {
+  // makertap: function(e) {
     // 根据ID请求后端数据获取JSON设置到list
-    this.setData({
-      hidden: false,
-      list: this.getDataFromServer(e),
-      showMap: false
-    });
-
-  },
+  //   this.setData({
+  //     hidden: false,
+  //     list: this.getDataFromServer(e),
+  //     showMap: false
+  //   });
+  // },
   //marker点击事件
   markertap(e) {
     console.log(e.markerId)
   },
   // control的点击事件
-  controltap(e) {
+  controltap(k) {
     // 根据ID请求后端数据获取JSON设置到list
     // this.setData({
     //   hidden: false,
     //   list: this.getDataFromServer(e)
     // });
     wx.navigateTo({
-      url: '../mapzhuan/mapz?controlId=' + e.controlId + '&markerId=' + e.markerId,
+      url: '../mapzhuan/mapz?controlId=' + k.controlId + '&markerId=' + k.markerId,
     })
-    console.log("00000",e)  
+      console.log("传参",k) 
   },
   // 点击关闭按钮事件
   // confirm: function () {

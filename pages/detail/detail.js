@@ -25,6 +25,7 @@ Page({
       6: '',
       7: ''
     },
+    arr:[],
     dwData: [
      {
        "eleId": "站点信息",
@@ -135,7 +136,7 @@ Page({
           "subContent": "",
           "defaultValue": "",
           "tipInfo": ""
-        }
+        },
     ],
     items: [
       { name: '移动', value: '移动' },
@@ -187,7 +188,7 @@ Page({
   },
   //调用image接口
   gotoShow: function (event) {
-    console.log(event);
+    console.log("event",event);
     var id = event.currentTarget.id;
     var that = this
     wx.chooseImage({
@@ -247,52 +248,19 @@ Page({
       }
     })
   },
-  //增加的内容
+  //加载页面获取数据 
   onLoad:      
   //缓存数组长度，进一步提高代码性能
-    function(eleName, dwData) {
-      var result = []
+    function(options) {
+      console.log("D",options);
+      var arr = [];
       for (var i = 0, len = this.data.dwData.length; i < len; i++) {
-        //  result.push(dwData[i][eleName])
-        result[i] = this.data.dwData[i]["eleName"];
-    }
-    console.log(result)
+           arr.push(this.data.dwData[i]["eleName"])
+          //  arr[i] = this.data.dwData[i]["eleName"]
+      };
+      console.log(arr);
+      this.setData({
+        data_yy:arr[1],
+      })
   },
-    // function (options) {
-    // console.log(options.id);
-    // console.log(options.class);
-    // console.log(this.data.dwData);
-    // console.log(this.data.hidden);
-    // console.log('Items',this.items);
-    // let init;
-    // 一个id对应着一组详细的数据 通过 id 对应
-    // for (var i = 0; i < this.data.dwData.length; i++) {
-    //   if (this.data.dwData[i].id == options.id) {
-    //       init = this.data.dwData[i]
-    //     }
-    //   };
-    // console.log(this);
-    // console.log('Init',init);
-    // this.setData({
-    //   detail_class: options.class,
-    //   data_name: init.name,
-    //   data_id: init.id,
-    //   data_city: init.city,
-    //   data_business:init.business,
-    //   data_DistrictCity: init.DistrictCity,
-    //   data_longitude: init.longitude,
-    //   data_latitude: init.latitude,
-    //   data_needLongitude: init.needLongitude,
-    //   data_needLatitude: init.needLatitude,
-    //   data_address:init.address,
-    //   data_worker: init.worker,
-    //   data_date: init.date,
-    //   data_times: init.times,
-    //   data_plies:init.lies,
-    //   data_state:init.state ,
-    //   data_welcome:init.welcome,
-    //   data_photo :init.photo,
-    //   data_photoDate:init.photoDate 
-    // })
-  // }
 });
