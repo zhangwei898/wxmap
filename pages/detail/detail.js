@@ -169,23 +169,29 @@ Page({
      console.log("Input")
      console.log(e)
      this.setData({
-       data_longitude:e.detail.value
+       inputValue:e.detail.value
      })
   },
-  //详细项点击事件跳出模态框
-  tapBus: function(){ 
-    this.setData({
-      hidden:false
-    })
-    console.log("clicked me")
+  //缓存
+  keepStorage:function(e){
+      var that=this
+      try {
+        var dada = wx.getStorageSync('dada') || []
+        dada.push(this.data.inputValue)
+        wx.setStorageSync('dada', this.data.inputValue)   
+        if (value) {
+           }
+          } catch (e) {
+      }
   },
   //取消模态框
-  cancel: function(){
-    this.setData({
-      hidden: true
-    });
-      console.log("clicked cancel")
-  },
+  // cancel: function(){
+  //   this.setData({
+  //     hidden: true
+  //   });
+  //     console.log("clicked cancel")
+  // },
+
   //调用image接口
   gotoShow: function (event) {
     console.log("event",event);
@@ -262,5 +268,6 @@ Page({
       this.setData({
         data_yy:arr[1],
       })
+  //获取缓存数据
   },
 });

@@ -67,7 +67,7 @@
             <view class="weui-label">经度:</view>
           </view>
            <view class="weui-cell__bd">
-            <input bindinput="tapInput" placeholder='666' value='{{data_longitude}}'/>
+            <input bindinput="tapInput" placeholder='666' value='{{inputValue}}'/>
           </view> 
         </view>
         <view class="weui-cell weui-cell_input">
@@ -75,14 +75,14 @@
             <view class="weui-label">纬度:</view>
           </view>
           <view class="weui-cell__bd">
-            <input bindinput="tapInput" placeholder='888' value="{{data_latitude}}"/>
+            <input bindinput="tapInput" placeholder='888' value="{{inputValue}}"/>
           </view>
         </view>
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
             <view class="weui-label">需求经度:</view>
           </view>  
-          <view class="weui-cell__bd">
+          <view class="weui-cell__bd"> 
             {{data_needlongitude}}
           </view>
         </view>

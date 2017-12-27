@@ -3,6 +3,7 @@
   <view class="page__bd">
     <view class="weui-cell" style='background-color:#E0FFFF'>
       <view class="weui-cells__bd">填报</view>
+       <button bindtap="keepStorage" class="weui_btn weui_btn_mini weui_btn_primary" style="margin-right:14px;height:30px">保存</button> 
     </view>
     <view class="weui-tab">
       <view class="weui-navbar">
@@ -30,7 +31,7 @@
           <view class="weui-cells weui-cells_after-title">
           </view>
         </view> 
-        <!-- 分割 -->
+        <!-- 分割照片 -->
          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
             <view >
                 <view class="bgPhoto">环境照</view>

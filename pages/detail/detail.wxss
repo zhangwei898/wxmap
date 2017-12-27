@@ -21,11 +21,11 @@ page,
 .weui-cell__bd{
   margin-left: 60px;
 }
-::-webkit-scrollbar {
+ ::-webkit-scrollbar {
   width: 0;
   height: 0;
   color: transparent;
-}
+} 
 
 .flex-row{
      display: flex;

@@ -1,4 +1,4 @@
-<view id="modal">
+<view style="width: 100%; height: {{height}}px;">
     <scroll-view scroll-y style="height: {{height-130}}px;"  scroll-into-view="{{toView}}"  scroll-top="{{scrollTop}}">
      <block wx:for="{{list}}" wx:for-item="item" wx:key="{{item.id}}">
       <view class="weui-cells weui-cells_after-title"> 

@@ -7,8 +7,17 @@ Page({
     this.setData({
       controlId: options.controlId,
       list: this.getDataFromServer(options)
+    });
+    console.log("Options",options);
+    //获取窗口高度
+     var that = this;
+     wx.getSystemInfo({
+      success: function(res) {
+      that.setData({
+        height: res.windowHeight
+      })
+      },
     })
-    console.log("Options",options)
   },
     getDataFromServer: function (e) {
     console.log("形参66",e);
