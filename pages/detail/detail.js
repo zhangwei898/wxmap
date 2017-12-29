@@ -25,6 +25,8 @@ Page({
       6: '',
       7: ''
     },
+    // dada:"",
+    list: [],
     arr:[],
     dwData: [
      {
@@ -173,16 +175,33 @@ Page({
      })
   },
   //缓存
-  keepStorage:function(e){
-      var that=this
-      try {
-        var dada = wx.getStorageSync('dada') || []
-        dada.push(this.data.inputValue)
-        wx.setStorageSync('dada', this.data.inputValue)   
-        if (value) {
-           }
-          } catch (e) {
-      }
+  keepStorage: function () {
+  //   if (this.data.inputValue != '') {
+  //     this.data.list.push(this.data.inputValue);
+  //     var List = this.data.list;
+  //     // wx.setStorageSync('infofrominput', this.data.infofrominput)
+  //     wx.setStorageSync('dada', this.data.list);
+  //     this.setData({
+  //       list: List,
+  //       dada: ''
+  //     })
+  //   }
+  //   console.log('缓存 ',list)
+  // },
+    //  var that=this;
+    //单个提交
+     try {
+          var  that = this;
+          var  list = that.data.list;
+          that.data.list.push(that.data.inputValue);
+          wx.setStorageSync('dada',that.data.list);
+          that.setData({
+            list: that.data.list,
+            dada:""
+           });
+         } catch (e) {
+      };
+      console.log("h缓存",list)
   },
   //取消模态框
   // cancel: function(){
@@ -196,7 +215,7 @@ Page({
   gotoShow: function (event) {
     console.log("event",event);
     var id = event.currentTarget.id;
-    var that = this
+    var that = this;
     wx.chooseImage({
       count: 9, // 最多可以选择的图片张数，默认9
       sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
@@ -227,7 +246,7 @@ Page({
   gotoShow1: function (event) {
     console.log(event);
     var id = event.currentTarget.id;
-    var that = this
+    var that = this;
     wx.chooseImage({
       count: 9, // 最多可以选择的图片张数，默认9
       sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
@@ -268,6 +287,5 @@ Page({
       this.setData({
         data_yy:arr[1],
       })
-  //获取缓存数据
   },
 });
